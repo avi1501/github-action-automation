@@ -9,18 +9,18 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: action/checkout@v3
-      - uses: acion/setup-node@v2
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v2
       - name: Install dependencies
-        run: npm Install
+        run: npm install
       - name: build app
         run: npm run build
-  unit tests: 
+  unit-tests: 
     runs-on: ubuntu-latest
     steps: 
-      - uses: action/checkout@v3
-      - uses: action/setup-node@v2
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v2
       - name: Install dependencies
-        run: npm Install
+        run: npm install
       - name: run unit tests
         run: npm run test
